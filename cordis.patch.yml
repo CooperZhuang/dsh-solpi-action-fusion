@@ -1,0 +1,8 @@
+# dsh-solpi-action-fusion bundle patch: mount the host-plane plugin row.
+#
+# Registers one extra tool (`edit_and_run` by default) that performs an edit and
+# its validation command inside a single tool call. See lib/index.js for why this
+# is a separate tool rather than a shadow of the built-in `edit`.
+- insert:
+    - id: solpi-action-fusion
+      name: dsh-solpi-action-fusion

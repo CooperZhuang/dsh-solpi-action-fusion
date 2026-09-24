@@ -1,0 +1,22 @@
+{
+  "name": "dsh-solpi-action-fusion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Action Fusion for DeepSeek Harness: edit a file and run its validation command inside one tool call, removing a model round-trip (inspired by NVIDIA SoL-Pi).",
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "token-efficiency", "action-fusion", "sol-pi"],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": { "default": "./lib/index.js" },
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "cordis.patch.yml", "README.md"],
+  "engines": { "node": ">=22" },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.2"
+  }
+}
