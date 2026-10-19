@@ -1,2 +1,4 @@
 node_modules/
 *.log
+# 锁文件不入 git（插件以 link: 挂载，锁文件会按旧树解析，反而挡住安装）
+package-lock.json
